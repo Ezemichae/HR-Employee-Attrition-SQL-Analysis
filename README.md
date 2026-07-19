@@ -41,7 +41,9 @@ This project analyzes an HR Employee Attrition dataset using MySQL to identify f
 
 ## Dataset
 
-IBM HR Employee Attrition DatasetInsights
+IBM HR Employee Attrition Dataset
+
+Insights
 
 1) Employee attrition is concentrated in specific departments.
 * Some departments experience significantly higher employee turnover than others, indicating that workforce retention challenges are not evenly distributed across the organization.
