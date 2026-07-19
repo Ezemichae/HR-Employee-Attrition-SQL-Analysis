@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project analyzes an HR Employee Attrition dataset using MySQL to identify factors contributing to employee turnover.
+This project analyzes a HR Employee Attrition dataset using MySQL to identify factors contributing to employee turnover.
 
 ## Business Questions
 
