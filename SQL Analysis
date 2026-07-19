@@ -1,0 +1,59 @@
+## 1.) Which departments have the highest employee attrition?
+
+SELECT
+    Department,
+    COUNT(*) AS Employees_Left
+FROM `hr employee attrition`
+WHERE Attrition = 'Yes'
+GROUP BY Department
+ORDER BY Employees_Left DESC;
+
+## 2.) 2. Does overtime increase employee attrition?
+
+SELECT
+    OverTime,
+    COUNT(*) AS Total_Employees,
+    SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END) AS Employees_Left,
+    ROUND(
+        SUM(CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*),
+        2
+    ) AS Attrition_Rate
+FROM `hr employee attrition`
+GROUP BY OverTime;
+
+## 3.) Which job roles earn the highest salaries?
+
+select jobRole,
+round(Avg(MonthlyIncome),2) as AverageSalary
+from `hr employee attrition`
+group by jobRole
+order by AverageSalary desc;
+
+## 4.) Which age group has the highest employee attrition?
+
+SELECT
+    CASE
+        WHEN Age BETWEEN 18 AND 29 THEN '18-29'
+        WHEN Age BETWEEN 30 AND 39 THEN '30-39'
+        WHEN Age BETWEEN 40 AND 49 THEN '40-49'
+        ELSE '50+'
+    END AS Age_Group,
+    COUNT(*) AS EmployeesLeft
+FROM `hr employee attrition`
+WHERE Attrition = 'Yes'
+GROUP BY Age_Group
+ORDER BY EmployeesLeft DESC;
+
+##  5. Does job satisfaction influence employee attrition?
+
+SELECT
+    JobSatisfaction,
+    COUNT(*) AS Total_Employees,
+    SUM(CASE WHEN Attrition='Yes' THEN 1 ELSE 0 END) AS Employees_Left,
+    ROUND(
+        SUM(CASE WHEN Attrition='Yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),
+        2
+    ) AS AttritionRate
+FROM `hr employee attrition`
+GROUP BY JobSatisfaction
+ORDER BY JobSatisfaction;
