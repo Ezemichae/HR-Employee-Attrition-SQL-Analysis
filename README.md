@@ -1,4 +1,47 @@
-Insights
+# HR Employee Attrition SQL Analysis
+
+## Project Overview
+
+This project analyzes an HR Employee Attrition dataset using MySQL to identify factors contributing to employee turnover.
+
+## Business Questions
+
+1. Which departments have the highest employee attrition?
+2. Does overtime increase employee attrition?
+3. Which job roles earn the highest salaries?
+4. Which age group has the highest employee attrition?
+5. Does job satisfaction influence employee attrition?
+
+## SQL Skills Demonstrated
+
+- SELECT
+- WHERE
+- GROUP BY
+- ORDER BY
+- CASE
+- COUNT()
+- SUM()
+- AVG()
+- ROUND()
+- Aggregate Functions
+
+## Key Findings
+
+- Research & Development recorded the highest attrition.
+- Employees working overtime had a significantly higher attrition rate.
+- Managers earned the highest average monthly income.
+- Employees aged 30–39 experienced the highest attrition.
+- Lower job satisfaction was associated with higher attrition.
+
+## Tools Used
+
+- MySQL
+- Git
+- GitHub
+
+## Dataset
+
+IBM HR Employee Attrition DatasetInsights
 
 1) Employee attrition is concentrated in specific departments.
 * Some departments experience significantly higher employee turnover than others, indicating that workforce retention challenges are not evenly distributed across the organization.
